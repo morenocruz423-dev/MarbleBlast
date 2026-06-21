@@ -575,6 +575,7 @@ export class Level extends Scheduler {
 			}
 		}
 		if (state.modification === 'platinum') musicFileName = 'music/' + musicFileName;
+		else if (state.modification === 'gold') musicFileName = 'music/' + musicFileName;
 
 		let toLoad = ["spawn.wav", "ready.wav", "set.wav", "go.wav", "whoosh.wav", musicFileName];
 		if (isFinite(this.mission.qualifyTime) && state.modification === 'platinum') toLoad.push("alarm.wav", "alarm_timeout.wav", "infotutorial.wav");
